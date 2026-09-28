@@ -1,0 +1,57 @@
+/* PRAARYA shared brand styles: logo placement + desktop menu fit.
+   Loaded after each page's inline <style>, so these rules take precedence. */
+
+/* Header logo */
+.navbar-brand-logo {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-right: 0;
+}
+.navbar-brand-logo img {
+    height: 64px;
+    width: auto;
+    display: block;
+}
+@media (max-width: 991.98px) {
+    .navbar-brand-logo img { height: 52px; }
+}
+
+/* Mobile menu (offcanvas) logo */
+.offcanvas-title img {
+    height: 52px;
+    width: auto;
+    display: block;
+}
+
+/* Footer logo: full lockup on its cream card */
+.footer-logo img {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    transition: opacity 0.3s ease;
+}
+.footer-logo:hover img { opacity: 0.9; }
+
+/* Desktop menu: never wrap a menu item onto two lines */
+.navbar-nav .nav-link,
+.header-whatsapp-btn {
+    white-space: nowrap;
+}
+
+/* Small desktops / landscape tablets (992px–1199px): tighten the menu so all 7 items fit on one row */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar-brand-logo img { height: 56px; }
+    .navbar-nav .nav-link {
+        font-size: 0.74rem;
+        letter-spacing: 0.5px;
+        margin: 0 8px;
+    }
+    .header-actions { gap: 10px; }
+    .header-whatsapp-btn {
+        padding: 7px 12px;
+        font-size: 0.75rem;
+    }
+}
