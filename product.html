@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | PRAARYA | Jewellery For Every You</title>
+    <meta name="description" content="View details and order premium PRAARYA jewellery seamlessly via WhatsApp.">
+    
+    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Brand Colors */
+            --pr-burgundy: #7A1028;
+            --pr-burgundy-dark: #4A0717;
+            --pr-gold: #C99A3A;
+            --pr-gold-soft: #DDBB6A;
+            --pr-ivory: #FCFAF5;
+            --pr-white: #FFFFFF;
+            --pr-charcoal: #222222;
+            --pr-gray: #777777;
+            --pr-gray-light: #E5E5E5;
+
+            /* Typography */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            
+            /* UI Elements */
+            --border-radius: 4px;
+            --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            
+            /* Layout */
+            --header-height: 80px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--pr-charcoal);
+            background-color: var(--pr-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Pad body on mobile to ensure content isn't hidden by sticky CTA */
+        @media (max-width: 991px) {
+            body { padding-bottom: 80px; }
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: var(--font-heading);
+            color: var(--pr-burgundy-dark);
+        }
+
+        a {
+            color: var(--pr-burgundy);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+        a:hover { color: var(--pr-gold); }
+
+        .text-burgundy { color: var(--pr-burgundy) !important; }
+        .text-burgundy-dark { color: var(--pr-burgundy-dark) !important; }
+        .text-gold { color: var(--pr-gold) !important; }
+        .text-charcoal { color: var(--pr-charcoal) !important; }
+        .text-ivory { color: var(--pr-ivory) !important; }
+        .text-gray { color: var(--pr-gray) !important; }
+
+        /* Header / Navbar */
+        .navbar {
+            background-color: var(--pr-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            padding: 0.5rem 0;
+            transition: var(--transition-smooth);
+            height: var(--header-height);
+        }
+        
+        .navbar.scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .navbar-brand-logo {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--pr-burgundy-dark);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        
+        @media (max-width: 991px) {
+            .navbar .container { position: relative; display: flex; justify-content: space-between; align-items: center; }
+            .navbar-brand-logo { position: absolute; left: 50%; transform: translateX(-50%); margin: 0 !important; }
+            .navbar-toggler, .header-actions { z-index: 10; }
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--pr-charcoal);
+            font-weight: 500;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 12px;
+            position: relative;
+            padding: 0.5rem 0 !important;
+        }
+
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+            color: var(--pr-burgundy);
+        }
+
+        .header-actions { display: flex; align-items: center; gap: 15px; }
+        .header-actions .icon-btn {
+            background: none; border: none; color: var(--pr-charcoal);
+            font-size: 1.1rem; transition: var(--transition-smooth); padding: 0;
+        }
+        
+        @media (min-width: 992px) {
+            .header-whatsapp-btn {
+                display: flex; align-items: center; gap: 8px;
+                background-color: var(--pr-burgundy); color: white;
+                padding: 8px 16px; border-radius: var(--border-radius);
+                font-size: 0.85rem; font-weight: 500; text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            .header-whatsapp-btn:hover { background-color: var(--pr-burgundy-dark); color: white; }
+        }
+
+        /* Mobile Premium Menu */
+        .premium-mobile-menu { width: 100% !important; border: none; background-color: var(--pr-white); }
+        .btn-close-custom {
+            background: none; border: none; font-size: 1.8rem; color: var(--pr-charcoal);
+            padding: 0; transition: var(--transition-smooth); display: flex; align-items: center; justify-content: center;
+        }
+        .mobile-nav-list { padding: 0; margin: 0; list-style: none; }
+        .mobile-nav-list .nav-link {
+            font-family: var(--font-heading); font-size: clamp(1.4rem, 6vw, 1.8rem);
+            color: var(--pr-charcoal); padding: 1.2rem 0; border-bottom: 1px solid rgba(0,0,0,0.05);
+            text-transform: none; letter-spacing: 0; font-weight: 400;
+        }
+        .mobile-nav-list .nav-item:last-child .nav-link { border-bottom: none; }
+
+        /* Page Layout */
+        .page-container {
+            margin-top: var(--header-height);
+            padding: 3rem 0 5rem;
+            flex-grow: 1;
+        }
+
+        .breadcrumb { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2rem; }
+        .breadcrumb-item a { color: var(--pr-gray); }
+        .breadcrumb-item.active { color: var(--pr-burgundy); }
+
+        /* Gallery */
+        .product-gallery { display: flex; flex-direction: column; gap: 1rem; position: sticky; top: calc(var(--header-height) + 2rem); }
+        
+        .main-image-container {
+            background-color: var(--pr-ivory);
+            aspect-ratio: 4/5;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .main-image { width: 100%; height: 100%; object-fit: cover; }
+        
+        .thumbnail-container { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; scrollbar-width: none; }
+        .thumbnail-container::-webkit-scrollbar { display: none; }
+        
+        .thumbnail-wrapper {
+            width: 80px; aspect-ratio: 1/1; flex-shrink: 0;
+            border-radius: 2px; overflow: hidden; border: 1px solid transparent;
+            cursor: pointer; opacity: 0.6; transition: var(--transition-smooth);
+        }
+        .thumbnail-wrapper:hover, .thumbnail-wrapper.active { opacity: 1; border-color: var(--pr-burgundy); }
+        .thumbnail-img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Product Info */
+        .product-info-container { padding-left: 2rem; }
+        @media (max-width: 991px) { .product-info-container { padding-left: 0; margin-top: 2rem; } }
+
+        .prod-category { font-size: 0.8rem; color: var(--pr-gray); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+        .prod-title { font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--pr-charcoal); line-height: 1.2; }
+        .prod-id { font-family: var(--font-body); font-size: 0.85rem; color: var(--pr-gray); margin-bottom: 1.5rem; display: block; }
+        .prod-price { font-family: var(--font-body); font-size: 1.5rem; font-weight: 500; color: var(--pr-burgundy-dark); margin-bottom: 1.5rem; }
+        .prod-desc { font-weight: 300; font-size: 1.05rem; color: var(--pr-charcoal); line-height: 1.7; margin-bottom: 2rem; }
+        
+        .prod-availability {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;
+            color: #2e7d32; margin-bottom: 2rem; background-color: #f1f8e9; padding: 4px 10px; border-radius: 2px;
+        }
+
+        /* Quantity & Actions */
+        .action-group { display: flex; align-items: stretch; gap: 15px; margin-bottom: 3rem; }
+        
+        .qty-selector {
+            display: flex; align-items: center; border: 1px solid var(--pr-gray-light);
+            border-radius: var(--border-radius); width: 120px; background: var(--pr-white);
+        }
+        .qty-btn {
+            background: none; border: none; width: 35px; height: 45px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem; color: var(--pr-charcoal); transition: var(--transition-smooth);
+        }
+        .qty-btn:hover { color: var(--pr-burgundy); }
+        .qty-input {
+            width: 50px; text-align: center; border: none; font-family: var(--font-body);
+            font-size: 1rem; font-weight: 500; pointer-events: none; background: transparent;
+        }
+
+        .btn-whatsapp-order {
+            background-color: #25D366; color: white; border: none; font-weight: 500;
+            border-radius: var(--border-radius); padding: 0 2rem; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px;
+            display: flex; align-items: center; justify-content: center; gap: 10px; flex-grow: 1; transition: var(--transition-smooth);
+        }
+        .btn-whatsapp-order:hover { background-color: #128C7E; color: white; }
+
+        /* Mobile Sticky CTA */
+        .mobile-sticky-cta { display: none; }
+        @media (max-width: 991px) {
+            .desktop-action-group { display: none; }
+            .mobile-sticky-cta {
+                display: flex; align-items: center; gap: 15px; position: fixed; bottom: 0; left: 0; width: 100%;
+                background: var(--pr-white); padding: 15px; box-shadow: 0 -4px 20px rgba(0,0,0,0.08); z-index: 1040;
+            }
+            .prod-title { font-size: 1.8rem; }
+        }
+
+        /* Product Details Accordion */
+        .accordion-product { margin-bottom: 3rem; }
+        .accordion-product .accordion-item { border: none; border-bottom: 1px solid var(--pr-gray-light); border-radius: 0; }
+        .accordion-product .accordion-button {
+            background: transparent; color: var(--pr-charcoal); font-family: var(--font-body); font-weight: 600;
+            text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; padding: 1.25rem 0; box-shadow: none;
+        }
+        .accordion-product .accordion-button:not(.collapsed) { color: var(--pr-burgundy); }
+        .accordion-product .accordion-body { padding: 0 0 1.25rem 0; font-weight: 300; font-size: 0.95rem; line-height: 1.7; color: var(--pr-charcoal); }
+
+        /* Related Products */
+        .related-section { padding: 5rem 0; background-color: var(--pr-ivory); }
+        .related-title { text-align: center; font-size: 2rem; margin-bottom: 3rem; }
+        
+        .product-card {
+            background: var(--pr-white); height: 100%; display: flex; flex-direction: column;
+            transition: var(--transition-smooth); padding-bottom: 1rem; border: 1px solid transparent;
+        }
+        .product-card:hover { border-color: var(--pr-gray-light); box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+        .product-card .img-container { aspect-ratio: 4/5; background: var(--pr-ivory); margin-bottom: 1rem; overflow: hidden; }
+        .product-card .img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+        .product-card:hover .img-container img { transform: scale(1.04); }
+        .product-card .info { padding: 0 0.5rem; display: flex; flex-direction: column; flex-grow: 1; }
+        .product-card .title { font-size: 0.95rem; font-weight: 400; color: var(--pr-charcoal); margin-bottom: 0.5rem; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;}
+        .product-card .price { font-weight: 500; color: var(--pr-burgundy-dark); margin-bottom: 1rem; }
+        .product-card .btn-view {
+            border: 1px solid var(--pr-gray-light); background: transparent; color: var(--pr-charcoal);
+            padding: 0.5rem; font-size: 0.8rem; text-transform: uppercase; text-align: center; transition: var(--transition-smooth);
+        }
+        .product-card .btn-view:hover { border-color: var(--pr-charcoal); }
+
+        /* Empty/Loading States */
+        .loading-state, .error-state { text-align: center; padding: 10vh 0; }
+
+        /* Footer */
+        .footer { background-color: var(--pr-charcoal); color: var(--pr-gray-light); padding: 5rem 0 2rem 0; margin-top: auto;}
+        .footer-logo { font-family: var(--font-heading); color: var(--pr-ivory); font-size: 1.8rem; letter-spacing: 2px; margin-bottom: 1.5rem; display: inline-block; }
+        .footer-logo:hover { color: var(--pr-gold); }
+        .footer-heading { color: var(--pr-ivory); font-family: var(--font-body); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; font-weight: 500; }
+        .footer-links { list-style: none; padding: 0; margin: 0; }
+        .footer-links li { margin-bottom: 0.8rem; }
+        .footer-links a { color: var(--pr-gray); font-size: 0.9rem; transition: var(--transition-smooth); }
+        .footer-links a:hover { color: var(--pr-ivory); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4rem; padding-top: 2rem; font-size: 0.85rem; color: #555; }
+        .footer-bottom a { color: #555; }
+        .footer-bottom a:hover { color: var(--pr-ivory); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <button class="navbar-toggler border-0 px-0 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#premiumMobileMenu">
+                <i class="fa-solid fa-bars fs-2 text-charcoal"></i>
+            </button>
+
+            <a class="navbar-brand navbar-brand-logo mx-auto mx-lg-0" href="index.html">PRAARYA</a>
+
+            <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="collections.html">Collections</a></li>
+                    <li class="nav-item"><a class="nav-link" href="story.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="why.html">Why Praarya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="care.html">Jewellery Care</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="header-actions">
+                <a href="https://wa.me/919866783703" class="icon-btn d-lg-none text-burgundy" target="_blank">
+                    <i class="fa-brands fa-whatsapp fs-3"></i>
+                </a>
+                <button class="icon-btn d-none d-lg-flex"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <a href="https://wa.me/919866783703" class="header-whatsapp-btn d-none d-lg-flex" target="_blank">
+                    <i class="fa-brands fa-whatsapp fs-5"></i><span>Order Now</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start premium-mobile-menu" tabindex="-1" id="premiumMobileMenu">
+        <div class="offcanvas-header pb-0 pt-4 px-4">
+            <h5 class="offcanvas-title font-heading text-burgundy-dark fs-2">PRAARYA</h5>
+            <button type="button" class="btn-close-custom" data-bs-dismiss="offcanvas"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column px-4 pt-3 pb-5">
+            <ul class="mobile-nav-list mb-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="collections.html">Collections</a></li>
+                <li class="nav-item"><a class="nav-link" href="story.html">Our Story</a></li>
+                <li class="nav-item"><a class="nav-link" href="why.html">Why Praarya</a></li>
+                <li class="nav-item"><a class="nav-link" href="care.html">Jewellery Care</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content Container (Dynamically Injected) -->
+    <main class="page-container" id="dynamic-content-area">
+        <div class="container">
+            <div class="loading-state">
+                <div class="spinner-border text-burgundy" role="status"></div>
+                <p class="mt-3 text-gray">Loading product details...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Sticky CTA (Dynamically Updated) -->
+    <div class="mobile-sticky-cta" id="mobile-sticky-cta">
+        <div class="qty-selector">
+            <button class="qty-btn" onclick="updateQty(-1, 'mobile')">-</button>
+            <input type="number" class="qty-input" id="mobile-qty-input" value="1" readonly>
+            <button class="qty-btn" onclick="updateQty(1, 'mobile')">+</button>
+        </div>
+        <button class="btn-whatsapp-order w-whatsapp-trigger" id="mobile-wa-btn">
+            <i class="fa-brands fa-whatsapp fs-5"></i> Buy
+        </button>
+    </div>
+
+    <!-- Related Products Section -->
+    <section class="related-section">
+        <div class="container">
+            <h2 class="font-heading related-title text-burgundy-dark">You May Also Like</h2>
+            <div class="row g-3 g-md-4" id="related-products-grid">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-4 col-md-12 pe-lg-5">
+                    <a href="index.html" class="footer-logo">PRAARYA</a>
+                    <p class="mb-4 text-gray" style="font-size: 0.95rem; font-weight: 300;">Jewellery For Every You. Premium, elegant, and affordable imitation jewellery designed to celebrate your unique style.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Praarya</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="story.html">Our Story</a></li>
+                        <li><a href="why.html">Why Praarya</a></li>
+                        <li><a href="care.html">Jewellery Care</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <h4 class="footer-heading">Customer Care</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms.html#section-8">Shipping & Returns</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
+                    <h4 class="footer-heading mb-3">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="d-flex align-items-start text-gray mb-2">
+                            <i class="fa-regular fa-envelope mt-1 me-2 text-ivory"></i> praaryacollections@gmail.com
+                        </li>
+                        <li class="d-flex align-items-start text-gray">
+                            <i class="fa-brands fa-whatsapp mt-1 me-2 text-ivory"></i> +91 98667 83703
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="mb-3 mb-md-0">&copy; 2026 PRAARYA. All rights reserved.</p>
+                <div class="d-flex gap-4">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // --- 1. Global Configuration & Data Architecture ---
+        // This simulates a unified data structure ready for React/API migration.
+        const PRAARYA_CONFIG = {
+            WHATSAPP_NUMBER: "919866783703", 
+            CURRENCY_SYMBOL: "₹"
+        };
+
+        const productCatalog = [
+            { 
+                id: 'PR-ER-101', name: 'Kundan Drop Earrings', category: 'Earrings', price: 1299, 
+                image: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=600',
+                gallery: [
+                    'https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=800',
+                    'https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=800'
+                ],
+                description: 'Elevate your festive look with these stunning Kundan Drop Earrings. Handcrafted with precision, they feature brilliant faux polki stones set in a gold-plated base, finished with delicate pearl drops for a timeless, elegant finish.',
+                materials: 'Brass base, 18k micron gold plating, synthetic Kundan stones, faux pearls.',
+                availability: 'In Stock'
+            },
+            { 
+                id: 'PR-NK-201', name: 'Pearl Choker Set', category: 'Necklaces', price: 2499, 
+                image: 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600',
+                gallery: [
+                    'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=800',
+                    'https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?q=80&w=800'
+                ],
+                description: 'A classic silhouette reimagined for the modern wardrobe. This elegant choker set features lustrous synthetic pearls woven securely, paired with matching subtle drop earrings.',
+                materials: 'High-grade synthetic pearls, anti-tarnish alloy base.',
+                availability: 'In Stock'
+            },
+            { 
+                id: 'PR-RG-301', name: 'Solitaire AD Ring', category: 'Rings', price: 999, 
+                image: 'https://images.unsplash.com/photo-1605100804763-247f66156eb4?q=80&w=600',
+                gallery: [
+                    'https://images.unsplash.com/photo-1605100804763-247f66156eb4?q=80&w=800',
+                    'https://images.unsplash.com/photo-1629224316810-9d8805b95e76?q=80&w=800'
+                ],
+                description: 'Make a statement without saying a word. This exquisite ring features a brilliant-cut American Diamond solitaire, surrounded by a delicate pavé halo on a polished silver-tone band.',
+                materials: 'Sterling silver plated alloy, AAA grade American Diamonds (Cubic Zirconia).',
+                availability: 'Low Stock'
+            },
+            { 
+                id: 'PR-BR-401', name: 'Rose Gold Tennis Bracelet', category: 'Bracelets', price: 1599, 
+                image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=600',
+                gallery: [
+                    'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=800'
+                ],
+                description: 'An everyday essential. This flexible tennis bracelet is lined with radiant crystals set in warm rose gold plating, offering a seamless and secure fit for elegant styling.',
+                materials: 'Brass base, Rose gold plating, Crystal rhinestones.',
+                availability: 'In Stock'
+            },
+             { 
+                id: 'PR-NK-202', name: 'Minimalist Layered Chain', category: 'Necklaces', price: 1199, 
+                image: 'https://images.unsplash.com/photo-1599643478524-fb524fa0a897?q=80&w=600',
+                gallery: [
+                    'https://images.unsplash.com/photo-1599643478524-fb524fa0a897?q=80&w=800'
+                ],
+                description: 'Two delicate chains pre-layered for effortless style. Perfect for pairing with workwear or casual weekend outfits.',
+                materials: 'Stainless steel, 18k gold PVD coating (water-resistant).',
+                availability: 'In Stock'
+            }
+        ];
+
+        // --- 2. Reusable Order Service ---
+        const OrderService = {
+            generateWhatsAppUrl: function(product, quantity) {
+                const currentUrl = window.location.href.split('#')[0]; 
+                const formattedPrice = product.price.toLocaleString('en-IN');
+                
+                const message = `Hello Praarya,\nI am interested in ordering this product.\n\nProduct: ${product.name}\nProduct ID: ${product.id}\nPrice: ${PRAARYA_CONFIG.CURRENCY_SYMBOL}${formattedPrice}\nQuantity: ${quantity}\n\nProduct Link: ${currentUrl}\n\nPlease share the availability and order details.`;
+                
+                return `https://wa.me/${PRAARYA_CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            }
+        };
+
+        // --- 3. Page Logic & State ---
+        let currentProduct = null;
+        let quantity = 1;
+
+        // Sync sticky header
+        const navbar = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        // Initialize Page
+        function init() {
+            // 1. Get ID from URL param (e.g., ?id=PR-ER-101)
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+
+            // 2. Find product or fallback to a default if testing without param
+            if (productId) {
+                currentProduct = productCatalog.find(p => p.id === productId);
+            } 
+            
+            // Fallback for demonstration purposes if URL param is missing
+            if (!currentProduct) {
+                currentProduct = productCatalog[0];
+                // Update URL silently for clean copy-pasting
+                window.history.replaceState(null, null, `?id=${currentProduct.id}`);
+            }
+
+            renderProductPage(currentProduct);
+            renderRelatedProducts(currentProduct.id);
+        }
+
+        // --- 4. Render Product Details (HTML Injection) ---
+        function renderProductPage(product) {
+            document.title = `${product.name} | PRAARYA Collections`;
+            
+            const contentArea = document.getElementById('dynamic-content-area');
+            const formattedPrice = product.price.toLocaleString('en-IN');
+            
+            // Build Gallery HTML
+            let thumbnailsHTML = '';
+            product.gallery.forEach((img, idx) => {
+                thumbnailsHTML += `
+                    <div class="thumbnail-wrapper ${idx === 0 ? 'active' : ''}" onclick="changeMainImage('${img}', this)">
+                        <img src="${img}" class="thumbnail-img" alt="Thumbnail">
+                    </div>
+                `;
+            });
+
+            // Build Main DOM structure
+            const html = `
+                <div class="container">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="collections.html">Collections</a></li>
+                            <li class="breadcrumb-item"><a href="collections.html?category=${encodeURIComponent(product.category)}">${product.category}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">${product.name}</li>
+                        </ol>
+                    </nav>
+
+                    <div class="row g-5">
+                        <!-- Left: Gallery -->
+                        <div class="col-lg-6">
+                            <div class="product-gallery">
+                                <div class="main-image-container">
+                                    <img src="${product.gallery[0]}" class="main-image" id="main-product-image" alt="${product.name}">
+                                </div>
+                                <div class="thumbnail-container">
+                                    ${thumbnailsHTML}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Details -->
+                        <div class="col-lg-6">
+                            <div class="product-info-container">
+                                <div class="prod-category">${product.category}</div>
+                                <h1 class="font-heading prod-title">${product.name}</h1>
+                                <span class="prod-id">Item Code: ${product.id}</span>
+                                <div class="prod-price">${PRAARYA_CONFIG.CURRENCY_SYMBOL}${formattedPrice}</div>
+                                
+                                <p class="prod-desc">${product.description}</p>
+                                
+                                <div class="prod-availability">
+                                    <i class="fa-solid fa-circle-check"></i> ${product.availability}
+                                </div>
+
+                                <!-- Desktop Action Group -->
+                                <div class="action-group desktop-action-group">
+                                    <div class="qty-selector">
+                                        <button class="qty-btn" onclick="updateQty(-1, 'desktop')">-</button>
+                                        <input type="number" class="qty-input" id="desktop-qty-input" value="1" readonly>
+                                        <button class="qty-btn" onclick="updateQty(1, 'desktop')">+</button>
+                                    </div>
+                                    <button class="btn-whatsapp-order" onclick="placeOrder()">
+                                        <i class="fa-brands fa-whatsapp fs-5"></i> Buy on WhatsApp
+                                    </button>
+                                </div>
+
+                                <!-- Details Accordion -->
+                                <div class="accordion accordion-product" id="productAccordion">
+                                    
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMaterials">
+                                                Product Details & Materials
+                                            </button>
+                                        </h2>
+                                        <div id="collapseMaterials" class="accordion-collapse collapse show" data-bs-parent="#productAccordion">
+                                            <div class="accordion-body">
+                                                ${product.materials}
+                                                <br><br>
+                                                <em>Note: As this is premium imitation jewellery, colors and textures may vary slightly from photographs due to lighting.</em>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCare">
+                                                Jewellery Care Guide
+                                            </button>
+                                        </h2>
+                                        <div id="collapseCare" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+                                            <div class="accordion-body">
+                                                To maintain the brilliance of this piece:
+                                                <ul class="mt-2 mb-2 ps-3">
+                                                    <li>Keep away from water, perfumes, and harsh chemicals.</li>
+                                                    <li>Wipe gently with a soft, dry cloth after every use.</li>
+                                                    <li>Store separately in a provided pouch or airtight box.</li>
+                                                </ul>
+                                                <a href="care.html" class="text-burgundy" style="text-decoration: underline; font-size: 0.9rem;">Read full care instructions</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseShipping">
+                                                Shipping & Delivery
+                                            </button>
+                                        </h2>
+                                        <div id="collapseShipping" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+                                            <div class="accordion-body">
+                                                Final shipping costs and delivery timelines will be calculated and confirmed by our customer care team via WhatsApp prior to order completion. Dispatched within 24-48 business hours of payment confirmation.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            contentArea.innerHTML = html;
+
+            // Bind Mobile CTA
+            const mobileBtn = document.getElementById('mobile-wa-btn');
+            if (mobileBtn) {
+                mobileBtn.onclick = placeOrder;
+            }
+        }
+
+        // --- 5. Interactive Functions ---
+
+        // Change Main Image
+        window.changeMainImage = function(src, thumbElement) {
+            document.getElementById('main-product-image').src = src;
+            document.querySelectorAll('.thumbnail-wrapper').forEach(el => el.classList.remove('active'));
+            thumbElement.classList.add('active');
+        }
+
+        // Update Quantity (syncs both mobile and desktop inputs)
+        window.updateQty = function(change, source) {
+            quantity += change;
+            if (quantity < 1) quantity = 1;
+            
+            const deskInput = document.getElementById('desktop-qty-input');
+            const mobInput = document.getElementById('mobile-qty-input');
+            
+            if (deskInput) deskInput.value = quantity;
+            if (mobInput) mobInput.value = quantity;
+        }
+
+        // Execute Order
+        window.placeOrder = function() {
+            if (!currentProduct) return;
+            const url = OrderService.generateWhatsAppUrl(currentProduct, quantity);
+            window.open(url, '_blank');
+        }
+
+        // Render Related Products (Filter out current, take up to 4)
+        function renderRelatedProducts(currentId) {
+            const grid = document.getElementById('related-products-grid');
+            const related = productCatalog.filter(p => p.id !== currentId).slice(0, 4);
+            
+            if (related.length === 0) {
+                document.querySelector('.related-section').style.display = 'none';
+                return;
+            }
+
+            let gridHTML = '';
+            related.forEach(p => {
+                gridHTML += `
+                    <div class="col-6 col-md-3">
+                        <div class="product-card">
+                            <a href="product.html?id=${p.id}" class="img-container">
+                                <img src="${p.image}" alt="${p.name}">
+                            </a>
+                            <div class="info">
+                                <h3 class="title font-body"><a href="product.html?id=${p.id}" class="text-charcoal">${p.name}</a></h3>
+                                <div class="price">${PRAARYA_CONFIG.CURRENCY_SYMBOL}${p.price.toLocaleString('en-IN')}</div>
+                                <a href="product.html?id=${p.id}" class="btn-view">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            grid.innerHTML = gridHTML;
+        }
+
+        // Boot
+        init();
+    </script>
+</body>
+</html>

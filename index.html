@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAARYA | Jewellery For Every You | Premium Imitation Jewellery</title>
+    <meta name="description" content="Discover PRAARYA, your destination for premium, elegant, and affordable imitation jewellery. Shop earrings, necklaces, rings, and more.">
+    
+    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Brand Colors */
+            --pr-burgundy: #7A1028;
+            --pr-burgundy-dark: #4A0717;
+            --pr-gold: #C99A3A;
+            --pr-gold-soft: #DDBB6A;
+            --pr-ivory: #FCFAF5;
+            --pr-white: #FFFFFF;
+            --pr-charcoal: #222222;
+            --pr-gray: #777777;
+            --pr-gray-light: #E5E5E5;
+
+            /* Typography */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            
+            /* UI Elements */
+            --border-radius: 4px;
+            --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 10px 30px rgba(122, 16, 40, 0.08);
+            
+            /* Layout */
+            --header-height: 80px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--pr-charcoal);
+            background-color: var(--pr-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: var(--font-heading);
+            color: var(--pr-burgundy-dark);
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--pr-burgundy);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        a:hover {
+            color: var(--pr-gold);
+        }
+
+        /* Typography Utilities */
+        .text-burgundy { color: var(--pr-burgundy) !important; }
+        .text-burgundy-dark { color: var(--pr-burgundy-dark) !important; }
+        .text-gold { color: var(--pr-gold) !important; }
+        .text-charcoal { color: var(--pr-charcoal) !important; }
+        .text-ivory { color: var(--pr-ivory) !important; }
+        .bg-burgundy { background-color: var(--pr-burgundy) !important; }
+        .bg-burgundy-dark { background-color: var(--pr-burgundy-dark) !important; }
+        .bg-ivory { background-color: var(--pr-ivory) !important; }
+        .bg-gold { background-color: var(--pr-gold) !important; }
+
+        /* Custom Buttons */
+        .btn-brand-primary {
+            background-color: var(--pr-burgundy);
+            color: var(--pr-white);
+            border: 1px solid var(--pr-burgundy);
+            font-family: var(--font-body);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            padding: 0.8rem 2rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition-smooth);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-brand-primary:hover {
+            background-color: var(--pr-burgundy-dark);
+            border-color: var(--pr-burgundy-dark);
+            color: var(--pr-white);
+        }
+
+        .btn-brand-outline {
+            background-color: transparent;
+            color: var(--pr-burgundy);
+            border: 1px solid var(--pr-burgundy);
+            font-family: var(--font-body);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            padding: 0.8rem 2rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition-smooth);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-brand-outline:hover {
+            background-color: var(--pr-burgundy);
+            color: var(--pr-white);
+        }
+        
+        .btn-brand-outline-light {
+            background-color: transparent;
+            color: var(--pr-ivory);
+            border: 1px solid var(--pr-ivory);
+            font-family: var(--font-body);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            padding: 0.8rem 2rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition-smooth);
+        }
+
+        .btn-brand-outline-light:hover {
+            background-color: var(--pr-ivory);
+            color: var(--pr-burgundy-dark);
+        }
+
+        .btn-whatsapp-order {
+            background-color: #25D366; /* WhatsApp Green */
+            color: white;
+            border: none;
+            font-weight: 500;
+            border-radius: var(--border-radius);
+            padding: 0.6rem 1rem;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-whatsapp-order:hover {
+            background-color: #128C7E;
+            color: white;
+        }
+
+        .btn-link-custom {
+            color: var(--pr-burgundy);
+            font-weight: 500;
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-link-custom::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--pr-burgundy);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-link-custom:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* Section Spacing - Premium Whitespace */
+        .section-padding {
+            padding: 6rem 0;
+        }
+        @media (max-width: 768px) {
+            .section-padding { padding: 4rem 0; }
+        }
+        
+        .section-heading-wrapper {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        @media (max-width: 768px) {
+            .section-heading-wrapper { margin-bottom: 2.5rem; }
+        }
+        
+        .section-heading {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 768px) {
+            .section-heading { font-size: 2rem; }
+        }
+
+        /* Header / Navbar */
+        .navbar {
+            background-color: var(--pr-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            padding: 0.5rem 0;
+            transition: var(--transition-smooth);
+            height: var(--header-height);
+        }
+        
+        .navbar.scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .navbar-brand-logo {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--pr-burgundy-dark);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        
+        @media (max-width: 991px) {
+            .navbar-brand-logo {
+                font-size: 1.5rem;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--pr-charcoal);
+            font-weight: 500;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 12px;
+            position: relative;
+            padding: 0.5rem 0 !important;
+        }
+
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+            color: var(--pr-burgundy);
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--pr-burgundy);
+            transition: var(--transition-smooth);
+            transform: translateX(-50%);
+        }
+
+        .navbar-nav .nav-link:hover::after, .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-actions .icon-btn {
+            background: none;
+            border: none;
+            color: var(--pr-charcoal);
+            font-size: 1.1rem;
+            transition: var(--transition-smooth);
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-actions .icon-btn:hover {
+            color: var(--pr-burgundy);
+        }
+        
+        .header-whatsapp-btn {
+            display: none;
+        }
+        
+        @media (min-width: 992px) {
+            .header-whatsapp-btn {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                background-color: var(--pr-burgundy);
+                color: white;
+                padding: 8px 16px;
+                border-radius: var(--border-radius);
+                font-size: 0.85rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                text-decoration: none;
+                transition: var(--transition-smooth);
+            }
+            .header-whatsapp-btn:hover {
+                background-color: var(--pr-burgundy-dark);
+                color: white;
+            }
+        }
+
+        /* Premium Mobile Menu & Header Updates */
+        .premium-mobile-menu {
+            width: 100% !important; 
+            border: none;
+            background-color: var(--pr-white);
+        }
+        
+        .btn-close-custom {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--pr-charcoal);
+            padding: 0;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .mobile-nav-list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .mobile-nav-list .nav-link {
+            font-family: var(--font-heading);
+            font-size: clamp(1.4rem, 6vw, 1.8rem);
+            color: var(--pr-charcoal);
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            text-transform: none; 
+            letter-spacing: 0;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: var(--transition-smooth);
+        }
+        
+        .mobile-nav-list .nav-link::after {
+            content: '\f105'; /* FontAwesome right angle */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 1.2rem;
+            color: var(--pr-gold-soft);
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: var(--transition-smooth);
+            position: static;
+            width: auto;
+            height: auto;
+            background: none;
+        }
+        
+        .mobile-nav-list .nav-item:last-child .nav-link {
+            border-bottom: none;
+        }
+        
+        .mobile-nav-list .nav-link:hover, 
+        .mobile-nav-list .nav-link:focus,
+        .mobile-nav-list .nav-link.active {
+            color: var(--pr-burgundy);
+            padding-left: 10px;
+        }
+        
+        .mobile-nav-list .nav-link:hover::after,
+        .mobile-nav-list .nav-link.active::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .mobile-menu-ctas {
+            margin-top: auto;
+            padding-top: 2rem;
+        }
+
+        @media (max-width: 991px) {
+            .navbar .container {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .navbar-brand-logo {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                margin: 0 !important;
+            }
+            .navbar-toggler {
+                z-index: 10;
+            }
+            .header-actions {
+                z-index: 10;
+            }
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: calc(100vh - var(--header-height));
+            min-height: 600px;
+            background-color: var(--pr-ivory);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin-top: var(--header-height);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 85vh;
+                min-height: 500px;
+            }
+        }
+
+        .hero-img-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+            z-index: 1;
+        }
+
+        /* Mobile optimization: crop differently */
+        @media (max-width: 768px) {
+            .hero-img-bg {
+                object-position: 65% center;
+            }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(252, 250, 245, 0.95) 0%, rgba(252, 250, 245, 0.7) 40%, rgba(252, 250, 245, 0) 100%);
+            z-index: 2;
+        }
+
+        @media (max-width: 991px) {
+            .hero-overlay {
+                background: linear-gradient(180deg, rgba(252, 250, 245, 0.4) 0%, rgba(252, 250, 245, 0.95) 100%);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 550px;
+        }
+
+        @media (max-width: 991px) {
+            .hero-content {
+                margin-top: auto;
+                padding-bottom: 3rem;
+                text-align: center;
+                max-width: 100%;
+            }
+            .hero-section > .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--pr-burgundy-dark);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.8rem; margin-bottom: 1rem; }
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: var(--pr-charcoal);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-desc { font-size: 1rem; margin-bottom: 1.5rem; }
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-buttons {
+                flex-direction: column;
+                gap: 10px;
+                padding: 0 20px;
+            }
+            .hero-buttons .btn {
+                width: 100%;
+            }
+        }
+
+        /* Mobile Horizontal Scroll System */
+        .scrolling-wrapper {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+            padding-bottom: 20px; /* Space for shadow */
+            margin-left: calc(-.5 * var(--bs-gutter-x));
+            margin-right: calc(-.5 * var(--bs-gutter-x));
+            padding-left: calc(.5 * var(--bs-gutter-x));
+            scroll-snap-type: x mandatory;
+        }
+        
+        .scrolling-wrapper::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
+        }
+        
+        @media (min-width: 992px) {
+            .scrolling-wrapper.desktop-grid {
+                flex-wrap: wrap;
+                overflow-x: visible;
+                padding-bottom: 0;
+                scroll-snap-type: none;
+            }
+            .scrolling-wrapper.desktop-grid .scroll-item {
+                flex: 0 0 auto;
+            }
+        }
+
+        .scroll-item {
+            scroll-snap-align: start;
+        }
+
+        /* Category Cards */
+        .category-card {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            group: category;
+            padding: 10px;
+        }
+
+        .category-img-wrapper {
+            width: 100%;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            border-radius: 2px;
+            background-color: var(--pr-ivory);
+            position: relative;
+        }
+        
+        .category-img-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(0,0,0,0.05);
+            pointer-events: none;
+        }
+
+        .category-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .category-card:hover .category-img {
+            transform: scale(1.05);
+        }
+
+        .category-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--pr-charcoal);
+            margin-bottom: 0;
+            transition: var(--transition-smooth);
+            font-style: italic;
+        }
+
+        .category-card:hover .category-title {
+            color: var(--pr-burgundy);
+        }
+        
+        .scroll-item.category-item {
+            flex: 0 0 70%;
+            max-width: 70%;
+            padding: 0 10px;
+        }
+        
+        @media (min-width: 768px) {
+            .scroll-item.category-item {
+                flex: 0 0 33.333%;
+                max-width: 33.333%;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .scroll-item.category-item {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
+
+        /* Premium Product Card */
+        .product-card {
+            background: var(--pr-white);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition-smooth);
+            group: product;
+        }
+
+        .product-img-container {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 4/5;
+            background-color: var(--pr-ivory);
+            margin-bottom: 1.25rem;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.03);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--pr-white);
+            color: var(--pr-charcoal);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            letter-spacing: 1px;
+            z-index: 2;
+            font-weight: 500;
+        }
+
+        /* Hover Actions Overlay Desktop */
+        .product-actions-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            z-index: 3;
+        }
+        
+        @media (min-width: 992px) {
+            .product-card:hover .product-actions-overlay {
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 991px) {
+            .product-actions-overlay {
+                display: none; /* Hide on mobile, use visible buttons */
+            }
+        }
+
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--pr-charcoal);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-price {
+            font-family: var(--font-body);
+            font-weight: 500;
+            color: var(--pr-burgundy);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            margin-top: auto;
+        }
+
+        .mobile-product-actions {
+            display: none;
+        }
+
+        @media (max-width: 991px) {
+            .mobile-product-actions {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                margin-top: 10px;
+            }
+        }
+        
+        .scroll-item.product-item {
+            flex: 0 0 75%;
+            max-width: 75%;
+            padding: 0 10px;
+        }
+        
+        @media (min-width: 768px) {
+            .scroll-item.product-item {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .scroll-item.product-item {
+                flex: 0 0 25%;
+                max-width: 25%;
+                padding: 0 15px;
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Brand Story Section */
+        .story-section {
+            background-color: var(--pr-ivory);
+            overflow: hidden;
+        }
+
+        .story-img-container {
+            position: relative;
+            height: 100%;
+            min-height: 500px;
+        }
+
+        .story-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .story-content {
+            padding: 5rem 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
+        @media (max-width: 991px) {
+            .story-content {
+                padding: 4rem 1.5rem;
+            }
+            .story-img-container {
+                min-height: 400px;
+            }
+        }
+
+        /* Features / Why Praarya */
+        .feature-box {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            height: 100%;
+            transition: var(--transition-smooth);
+            border: 1px solid transparent;
+        }
+        
+        .feature-box:hover {
+            border-color: var(--pr-gray-light);
+            background-color: var(--pr-ivory);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--pr-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--pr-burgundy-dark);
+            margin-bottom: 1rem;
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: var(--pr-gray);
+            margin-bottom: 0;
+        }
+
+        /* Lifestyle Image Section */
+        .lifestyle-section {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .lifestyle-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .lifestyle-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+
+        .lifestyle-content {
+            position: relative;
+            z-index: 3;
+            color: var(--pr-white);
+            padding: 0 20px;
+        }
+
+        .lifestyle-text {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-style: italic;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            line-height: 1.2;
+        }
+
+        @media (max-width: 768px) {
+            .lifestyle-text { font-size: 2.2rem; }
+        }
+
+        /* Instagram Section */
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        @media (min-width: 768px) {
+            .insta-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .insta-grid {
+                grid-template-columns: repeat(6, 1fr);
+                gap: 15px;
+            }
+        }
+
+        .insta-item {
+            position: relative;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            display: block;
+        }
+
+        .insta-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .insta-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(122, 16, 40, 0.8); /* Burgundy with opacity */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .insta-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .insta-item:hover .insta-overlay {
+            opacity: 1;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background-color: var(--pr-burgundy-dark);
+            color: var(--pr-ivory);
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--pr-charcoal);
+            color: var(--pr-gray-light);
+            padding: 5rem 0 2rem 0;
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            color: var(--pr-ivory);
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .footer-logo:hover {
+            color: var(--pr-gold);
+        }
+
+        .footer-heading {
+            color: var(--pr-ivory);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--pr-gray);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: var(--pr-ivory);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.05);
+            color: var(--pr-ivory);
+            transition: var(--transition-smooth);
+            font-size: 1.1rem;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--pr-burgundy);
+            color: var(--pr-white);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 4rem;
+            padding-top: 2rem;
+            font-size: 0.85rem;
+            color: #555;
+        }
+        
+        .footer-bottom a {
+            color: #555;
+            text-decoration: none;
+        }
+        
+        .footer-bottom a:hover {
+            color: var(--pr-ivory);
+        }
+        
+        /* Utility for fixed header spacing */
+        .header-spacer {
+            height: var(--header-height);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler border-0 px-0 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#premiumMobileMenu" aria-controls="premiumMobileMenu">
+                <i class="fa-solid fa-bars fs-2 text-charcoal"></i>
+            </button>
+
+            <!-- Brand Logo -->
+            <a class="navbar-brand navbar-brand-logo mx-auto mx-lg-0" href="index.html">
+                PRAARYA
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="collections.html">Collections</a></li>
+                    <li class="nav-item"><a class="nav-link" href="story.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="why.html">Why Praarya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="care.html">Jewellery Care</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Mobile WhatsApp Icon -->
+                <a href="https://wa.me/919866783703" class="icon-btn d-lg-none text-burgundy" target="_blank" aria-label="Order on WhatsApp">
+                    <i class="fa-brands fa-whatsapp fs-3"></i>
+                </a>
+                
+                <!-- Desktop Actions -->
+                <button class="icon-btn d-none d-lg-flex" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <a href="https://wa.me/919866783703" class="header-whatsapp-btn d-none d-lg-flex" target="_blank">
+                    <i class="fa-brands fa-whatsapp fs-5"></i>
+                    <span>Order Now</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Premium Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-start premium-mobile-menu" tabindex="-1" id="premiumMobileMenu" aria-labelledby="premiumMobileMenuLabel">
+        <div class="offcanvas-header pb-0 pt-4 px-4">
+            <h5 class="offcanvas-title font-heading text-burgundy-dark fs-2" id="premiumMobileMenuLabel">PRAARYA</h5>
+            <button type="button" class="btn-close-custom" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column px-4 pt-3 pb-5">
+            <ul class="mobile-nav-list mb-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="collections.html">Collections</a></li>
+                <li class="nav-item"><a class="nav-link" href="story.html">Our Story</a></li>
+                <li class="nav-item"><a class="nav-link" href="why.html">Why Praarya</a></li>
+                <li class="nav-item"><a class="nav-link" href="care.html">Jewellery Care</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="mobile-menu-ctas border-top border-light">
+                <a href="collections.html" class="btn btn-brand-primary w-100 py-3 mb-3 fs-6 d-flex justify-content-center">Explore Collections</a>
+                <a href="https://wa.me/919866783703" class="btn btn-whatsapp-order w-100 py-3 fs-6 d-flex justify-content-center" target="_blank">
+                    <i class="fa-brands fa-whatsapp fs-4"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- High quality lifestyle jewellery image -->
+        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=2000&auto=format&fit=crop" alt="Elegant woman wearing Praarya jewellery" class="hero-img-bg">
+        <div class="hero-overlay"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6 col-md-8">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Jewellery That Makes Every You Shine</h1>
+                        <p class="hero-desc">Discover elegant, modern jewellery designed to complement every style, every mood and every moment.</p>
+                        <div class="hero-buttons">
+                            <a href="collections.html" class="btn btn-brand-primary">Explore Collections</a>
+                            <a href="https://wa.me/919866783703" class="btn btn-brand-outline" target="_blank">
+                                <i class="fa-brands fa-whatsapp me-2 fs-5"></i> Shop on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop by Category Section -->
+    <section id="categories" class="section-padding">
+        <div class="container">
+            <div class="section-heading-wrapper">
+                <h2 class="section-heading font-heading">Find Your Style</h2>
+                <div style="width: 40px; height: 1px; background-color: var(--pr-burgundy); margin: 0 auto;"></div>
+            </div>
+            
+            <div class="scrolling-wrapper desktop-grid">
+                <!-- Category 1: Earrings -->
+                <div class="scroll-item category-item">
+                    <a href="collections.html" class="category-card">
+                        <div class="category-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=600&auto=format&fit=crop" alt="Earrings" class="category-img">
+                        </div>
+                        <h3 class="category-title">Earrings</h3>
+                    </a>
+                </div>
+                <!-- Category 2: Necklaces -->
+                <div class="scroll-item category-item">
+                    <a href="collections.html" class="category-card">
+                        <div class="category-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop" alt="Necklaces" class="category-img">
+                        </div>
+                        <h3 class="category-title">Necklaces</h3>
+                    </a>
+                </div>
+                <!-- Category 3: Rings -->
+                <div class="scroll-item category-item">
+                    <a href="collections.html" class="category-card">
+                        <div class="category-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f66156eb4?q=80&w=600&auto=format&fit=crop" alt="Rings" class="category-img">
+                        </div>
+                        <h3 class="category-title">Rings</h3>
+                    </a>
+                </div>
+                <!-- Category 4: Bracelets & Bangles -->
+                <div class="scroll-item category-item">
+                    <a href="collections.html" class="category-card">
+                        <div class="category-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=600&auto=format&fit=crop" alt="Bracelets & Bangles" class="category-img">
+                        </div>
+                        <h3 class="category-title">Bracelets & Bangles</h3>
+                    </a>
+                </div>
+                <!-- View All (Mobile visible mostly) -->
+                <div class="scroll-item category-item d-lg-none d-flex align-items-center justify-content-center">
+                    <a href="collections.html" class="btn-link-custom py-3 px-4 text-center">
+                        View All Categories <br> <i class="fa-solid fa-arrow-right mt-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 d-none d-lg-block">
+                <a href="collections.html" class="btn-link-custom">Explore All Categories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section id="collections" class="section-padding bg-ivory">
+        <div class="container">
+            <div class="section-heading-wrapper">
+                <h2 class="section-heading font-heading">Curated For You</h2>
+                <div style="width: 40px; height: 1px; background-color: var(--pr-burgundy); margin: 0 auto;"></div>
+            </div>
+
+            <div class="scrolling-wrapper desktop-grid row mx-0">
+                
+                <!-- Product 1 -->
+                <div class="scroll-item product-item">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <span class="product-badge">New Arrival</span>
+                            <img src="https://images.unsplash.com/photo-1599643478524-fb524fa0a897?q=80&w=800&auto=format&fit=crop" class="product-img" alt="Kundan Polki Choker Set">
+                            
+                            <!-- Desktop Hover Overlay -->
+                            <div class="product-actions-overlay">
+                                <a href="product.html?id=PR-NK-1042" class="btn btn-light w-100 rounded-0 text-uppercase fw-medium" style="font-size: 0.8rem;">View Details</a>
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger rounded-0" 
+                                    data-product-name="Kundan Polki Choker Set" 
+                                    data-product-id="PR-NK-1042" 
+                                    data-product-price="₹2,499">
+                                    <i class="fa-brands fa-whatsapp"></i> Buy on WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Kundan Polki Choker Set with Pearls</h3>
+                            <div class="product-price">₹2,499</div>
+                            
+                            <!-- Mobile Visible Actions -->
+                            <div class="mobile-product-actions">
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger" 
+                                    data-product-name="Kundan Polki Choker Set" 
+                                    data-product-id="PR-NK-1042" 
+                                    data-product-price="₹2,499">
+                                    <i class="fa-brands fa-whatsapp"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="scroll-item product-item">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=800&auto=format&fit=crop" class="product-img" alt="Gold Plated Jhumkas">
+                            
+                            <!-- Desktop Hover Overlay -->
+                            <div class="product-actions-overlay">
+                                <a href="product.html?id=PR-ER-2055" class="btn btn-light w-100 rounded-0 text-uppercase fw-medium" style="font-size: 0.8rem;">View Details</a>
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger rounded-0" 
+                                    data-product-name="Antique Gold Plated Jhumkas" 
+                                    data-product-id="PR-ER-2055" 
+                                    data-product-price="₹899">
+                                    <i class="fa-brands fa-whatsapp"></i> Buy on WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Antique Gold Plated Jhumkas</h3>
+                            <div class="product-price">₹899</div>
+                            
+                            <!-- Mobile Visible Actions -->
+                            <div class="mobile-product-actions">
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger" 
+                                    data-product-name="Antique Gold Plated Jhumkas" 
+                                    data-product-id="PR-ER-2055" 
+                                    data-product-price="₹899">
+                                    <i class="fa-brands fa-whatsapp"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="scroll-item product-item">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <span class="product-badge">Bestseller</span>
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f66156eb4?q=80&w=800&auto=format&fit=crop" class="product-img" alt="American Diamond Ring">
+                            
+                            <!-- Desktop Hover Overlay -->
+                            <div class="product-actions-overlay">
+                                <a href="product.html?id=PR-RG-3011" class="btn btn-light w-100 rounded-0 text-uppercase fw-medium" style="font-size: 0.8rem;">View Details</a>
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger rounded-0" 
+                                    data-product-name="Solitaire American Diamond Ring" 
+                                    data-product-id="PR-RG-3011" 
+                                    data-product-price="₹1,299">
+                                    <i class="fa-brands fa-whatsapp"></i> Buy on WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Solitaire American Diamond Ring</h3>
+                            <div class="product-price">₹1,299</div>
+                            
+                            <!-- Mobile Visible Actions -->
+                            <div class="mobile-product-actions">
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger" 
+                                    data-product-name="Solitaire American Diamond Ring" 
+                                    data-product-id="PR-RG-3011" 
+                                    data-product-price="₹1,299">
+                                    <i class="fa-brands fa-whatsapp"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="scroll-item product-item">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=800&auto=format&fit=crop" class="product-img" alt="Tennis Bracelet">
+                            
+                            <!-- Desktop Hover Overlay -->
+                            <div class="product-actions-overlay">
+                                <a href="product.html?id=PR-BR-4008" class="btn btn-light w-100 rounded-0 text-uppercase fw-medium" style="font-size: 0.8rem;">View Details</a>
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger rounded-0" 
+                                    data-product-name="Rose Gold Plated Tennis Bracelet" 
+                                    data-product-id="PR-BR-4008" 
+                                    data-product-price="₹1,599">
+                                    <i class="fa-brands fa-whatsapp"></i> Buy on WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Rose Gold Plated Tennis Bracelet</h3>
+                            <div class="product-price">₹1,599</div>
+                            
+                            <!-- Mobile Visible Actions -->
+                            <div class="mobile-product-actions">
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger" 
+                                    data-product-name="Rose Gold Plated Tennis Bracelet" 
+                                    data-product-id="PR-BR-4008" 
+                                    data-product-price="₹1,599">
+                                    <i class="fa-brands fa-whatsapp"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-4 pt-3">
+                <a href="collections.html" class="btn btn-brand-outline">View All Curations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Story Section -->
+    <section id="story" class="story-section">
+        <div class="row g-0">
+            <div class="col-lg-6 order-lg-2">
+                <div class="story-img-container">
+                    <img src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?q=80&w=1200&auto=format&fit=crop" alt="Praarya Craftsmanship" class="story-img">
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="story-content">
+                    <h2 class="font-heading display-4 mb-4 text-burgundy-dark">More Than Jewellery</h2>
+                    <p class="lead mb-4 text-charcoal">At PRAARYA, we believe premium design and superior quality shouldn't come with an intimidating price tag.</p>
+                    <p class="mb-5 text-gray" style="font-weight: 300;">Our collections are built around self-expression, elegance, and accessible style. We bring you meticulous craftsmanship in imitation jewellery that looks and feels like fine jewellery, designed to celebrate every version of you.</p>
+                    <div>
+                        <a href="story.html"$1</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Praarya Section -->
+    <section id="why-praarya" class="section-padding bg-white border-bottom border-light">
+        <div class="container">
+            <div class="section-heading-wrapper">
+                <h2 class="section-heading font-heading">The Praarya Promise</h2>
+                <div style="width: 40px; height: 1px; background-color: var(--pr-burgundy); margin: 0 auto;"></div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fa-regular fa-gem feature-icon"></i>
+                        <h3 class="feature-title">Elegant Designs</h3>
+                        <p class="feature-desc">Curated collections that blend modern aesthetics with timeless elegance.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-medal feature-icon"></i>
+                        <h3 class="feature-title">Premium Look</h3>
+                        <p class="feature-desc">High-quality plating and craftsmanship that rivals fine jewellery.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-tag feature-icon"></i>
+                        <h3 class="feature-title">Affordable Style</h3>
+                        <p class="feature-desc">Luxury you can wear everyday, without the premium price tag.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fa-regular fa-face-smile feature-icon"></i>
+                        <h3 class="feature-title">Made for Every You</h3>
+                        <p class="feature-desc">Versatile pieces designed to complement every mood and occasion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Now (Similar structure to Curated, distinct content) -->
+    <section class="section-padding bg-ivory">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-5">
+                <div>
+                    <h2 class="section-heading font-heading mb-2">Trending Now</h2>
+                    <div style="width: 40px; height: 1px; background-color: var(--pr-burgundy);"></div>
+                </div>
+                <a href="collections.html"$1</a>
+            </div>
+
+            <div class="scrolling-wrapper desktop-grid row mx-0">
+                <!-- Product 5 -->
+                <div class="scroll-item product-item">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=800&auto=format&fit=crop" class="product-img" alt="Minimalist Gold Chain">
+                            <div class="product-actions-overlay">
+                                <a href="product.html?id=PR-NK-5011" class="btn btn-light w-100 rounded-0 text-uppercase fw-medium" style="font-size: 0.8rem;">View Details</a>
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger rounded-0" 
+                                    data-product-name="Minimalist Gold Layered Chain" 
+                                    data-product-id="PR-NK-5011" 
+                                    data-product-price="₹1,199">
+                                    <i class="fa-brands fa-whatsapp"></i> Buy on WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Minimalist Gold Layered Chain</h3>
+                            <div class="product-price">₹1,199</div>
+                            <div class="mobile-product-actions">
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger" 
+                                    data-product-name="Minimalist Gold Layered Chain" data-product-id="PR-NK-5011" data-product-price="₹1,199">
+                                    <i class="fa-brands fa-whatsapp"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="scroll-item product-item">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <span class="product-badge">Trending</span>
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=800&auto=format&fit=crop" class="product-img" alt="Pearl Drop Earrings">
+                            <div class="product-actions-overlay">
+                                <a href="product.html?id=PR-ER-6022" class="btn btn-light w-100 rounded-0 text-uppercase fw-medium" style="font-size: 0.8rem;">View Details</a>
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger rounded-0" 
+                                    data-product-name="Classic Pearl Drop Earrings" 
+                                    data-product-id="PR-ER-6022" 
+                                    data-product-price="₹699">
+                                    <i class="fa-brands fa-whatsapp"></i> Buy on WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Classic Pearl Drop Earrings</h3>
+                            <div class="product-price">₹699</div>
+                            <div class="mobile-product-actions">
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger" 
+                                    data-product-name="Classic Pearl Drop Earrings" data-product-id="PR-ER-6022" data-product-price="₹699">
+                                    <i class="fa-brands fa-whatsapp"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="scroll-item product-item">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://images.unsplash.com/photo-1629224316810-9d8805b95e76?q=80&w=800&auto=format&fit=crop" class="product-img" alt="Bridal Kundan Set">
+                            <div class="product-actions-overlay">
+                                <a href="product.html?id=PR-NK-7088" class="btn btn-light w-100 rounded-0 text-uppercase fw-medium" style="font-size: 0.8rem;">View Details</a>
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger rounded-0" 
+                                    data-product-name="Heavy Bridal Kundan Set" 
+                                    data-product-id="PR-NK-7088" 
+                                    data-product-price="₹4,999">
+                                    <i class="fa-brands fa-whatsapp"></i> Buy on WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Heavy Bridal Kundan Set</h3>
+                            <div class="product-price">₹4,999</div>
+                            <div class="mobile-product-actions">
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger" 
+                                    data-product-name="Heavy Bridal Kundan Set" data-product-id="PR-NK-7088" data-product-price="₹4,999">
+                                    <i class="fa-brands fa-whatsapp"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="scroll-item product-item">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f66156eb4?q=80&w=800&auto=format&fit=crop" class="product-img" alt="Statement Ring">
+                            <div class="product-actions-overlay">
+                                <a href="product.html?id=PR-RG-8044" class="btn btn-light w-100 rounded-0 text-uppercase fw-medium" style="font-size: 0.8rem;">View Details</a>
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger rounded-0" 
+                                    data-product-name="Emerald Cut Statement Ring" 
+                                    data-product-id="PR-RG-8044" 
+                                    data-product-price="₹999">
+                                    <i class="fa-brands fa-whatsapp"></i> Buy on WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Emerald Cut Statement Ring</h3>
+                            <div class="product-price">₹999</div>
+                            <div class="mobile-product-actions">
+                                <button class="btn btn-whatsapp-order w-whatsapp-trigger" 
+                                    data-product-name="Emerald Cut Statement Ring" data-product-id="PR-RG-8044" data-product-price="₹999">
+                                    <i class="fa-brands fa-whatsapp"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lifestyle / Brand Image Section -->
+    <section class="lifestyle-section">
+        <img src="https://images.unsplash.com/photo-1599643478524-fb524fa0a897?q=80&w=2000&auto=format&fit=crop" alt="Praarya Lifestyle" class="lifestyle-bg" style="object-position: center 20%;">
+        <div class="lifestyle-overlay"></div>
+        <div class="lifestyle-content">
+            <h2 class="lifestyle-text">Your Style.<br>Your Moment.<br>Your Praarya.</h2>
+        </div>
+    </section>
+
+    <!-- Instagram Style Section -->
+    <section class="section-padding bg-white">
+        <div class="container-fluid px-0">
+            <div class="section-heading-wrapper mb-4">
+                <h2 class="section-heading font-heading">Follow Praarya</h2>
+                <div style="width: 40px; height: 1px; background-color: var(--pr-burgundy); margin: 0 auto 1.5rem auto;"></div>
+                <a href="https://www.instagram.com/praarya_collections/" class="btn-link-custom text-gray" target="_blank">@praarya_collections</a>
+            </div>
+            
+            <div class="insta-grid mt-5">
+                <a href="https://www.instagram.com/praarya_collections/" target="_blank" class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop" alt="Instagram Post 1">
+                    <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </a>
+                <a href="https://www.instagram.com/praarya_collections/" target="_blank" class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop" alt="Instagram Post 2">
+                    <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </a>
+                <a href="https://www.instagram.com/praarya_collections/" target="_blank" class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f66156eb4?q=80&w=600&auto=format&fit=crop" alt="Instagram Post 3">
+                    <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </a>
+                <a href="https://www.instagram.com/praarya_collections/" target="_blank" class="insta-item d-none d-md-block">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=600&auto=format&fit=crop" alt="Instagram Post 4">
+                    <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </a>
+                <a href="https://www.instagram.com/praarya_collections/" target="_blank" class="insta-item d-none d-lg-block">
+                    <img src="https://images.unsplash.com/photo-1629224316810-9d8805b95e76?q=80&w=600&auto=format&fit=crop" alt="Instagram Post 5">
+                    <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </a>
+                <a href="https://www.instagram.com/praarya_collections/" target="_blank" class="insta-item d-none d-lg-block">
+                    <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=600&auto=format&fit=crop" alt="Instagram Post 6">
+                    <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </a>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="https://www.instagram.com/praarya_collections/" class="btn btn-brand-outline" target="_blank"><i class="fa-brands fa-instagram me-2"></i> Follow Us on Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section-padding final-cta">
+        <div class="container">
+            <h2 class="font-heading display-5 mb-4 text-ivory">Find Something That Feels Like You.</h2>
+            <p class="lead mb-5 text-ivory opacity-75 mx-auto" style="max-width: 600px; font-weight: 300;">Explore our full range of premium imitation jewellery and discover your next favorite piece.</p>
+            <a href="collections.html" class="btn btn-brand-outline-light">Explore Collections</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-4 col-md-12 pe-lg-5">
+                    <a href="index.html" class="footer-logo">PRAARYA</a>
+                    <p class="mb-4 text-gray" style="font-size: 0.95rem; font-weight: 300;">Jewellery For Every You. Premium, elegant, and affordable imitation jewellery designed to celebrate your unique style.</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/praarya_collections/" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://wa.me/919866783703" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Praarya</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="story.html">Our Story</a></li>
+                        <li><a href="why.html">Why Praarya</a></li>
+                        <li><a href="care.html">Jewellery Care</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <h4 class="footer-heading">Collections</h4>
+                    <ul class="footer-links">
+                        <li><a href="collections.html">New Arrivals</a></li>
+                        <li><a href="collections.html">Earrings</a></li>
+                        <li><a href="collections.html">Necklaces & Sets</a></li>
+                        <li><a href="collections.html">Rings & Bracelets</a></li>
+                        <li><a href="collections.html">Trending Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-12">
+                    <h4 class="footer-heading">Customer Care</h4>
+                    <ul class="footer-links mb-4">
+                        <li><a href="terms.html#section-8">Shipping & Returns</a></li>
+                        <li><a href="care.html#careFaqAccordion">FAQ</a></li>
+                    </ul>
+                    <h4 class="footer-heading mb-3">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li class="d-flex align-items-start text-gray mb-2">
+                            <i class="fa-regular fa-envelope mt-1 me-2 text-ivory"></i>
+                            <a href="mailto:praaryacollections@gmail.com">praaryacollections@gmail.com</a>
+                        </li>
+                        <li class="d-flex align-items-start text-gray">
+                            <i class="fa-brands fa-whatsapp mt-1 me-2 text-ivory"></i>
+                            <a href="https://wa.me/919866783703" target="_blank">+91 98667 83703</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="mb-3 mb-md-0">&copy; 2026 PRAARYA. All rights reserved.</p>
+                <div class="d-flex gap-4">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Interactions and Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- UI Interactions ---
+            
+            // Sticky Navbar Shadow on Scroll
+            const navbar = document.getElementById('mainNav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Prevent default behavior for placeholder links
+            const emptyLinks = document.querySelectorAll('a[href="#"]');
+            emptyLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    // Only prevent default if it's strictly "#" to allow offcanvas toggle to work
+                    if(link.getAttribute('href') === '#') {
+                        e.preventDefault();
+                    }
+                });
+            });
+
+            // Smooth scrolling for anchor links (e.g. #collections)
+            document.querySelectorAll('a[href^="#"]:not([href="#"]):not([data-bs-toggle])').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Close offcanvas if open
+                        const offcanvas = document.getElementById('premiumMobileMenu');
+                        if (offcanvas && offcanvas.classList.contains('show')) {
+                            const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvas);
+                            bsOffcanvas.hide();
+                        }
+
+                        // Scroll to element accounting for fixed header
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+
+
+            // --- WhatsApp Order Logic ---
+            
+            // Configuration
+            const BRAND_WHATSAPP_NUMBER = "919866783703"; // PRAARYA WhatsApp Number
+            
+            const handleWhatsAppOrder = (event) => {
+                // Prevent event bubbling if button is inside a link
+                event.preventDefault();
+                event.stopPropagation();
+                
+                const button = event.currentTarget;
+                
+                // Extract product details
+                const productName = button.getAttribute('data-product-name') || 'A Praarya Product';
+                const productId = button.getAttribute('data-product-id') || 'Unknown ID';
+                const productPrice = button.getAttribute('data-product-price') || 'Price upon request';
+                
+                // Construct clean URL reference
+                const currentUrl = window.location.href.split('#')[0]; 
+                
+                // Construct the structured order message
+                const message = `Hello PRAARYA Team, 👋\n\nI am interested in ordering:\n\n*${productName}*\nProduct ID: ${productId}\nPrice: ${productPrice}\n\nReference: ${currentUrl}\n\nPlease share details on payment and delivery. Thank you!`;
+                
+                // Encode and redirect
+                const encodedMessage = encodeURIComponent(message);
+                const whatsappUrl = `https://wa.me/${BRAND_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+                
+                window.open(whatsappUrl, '_blank');
+            };
+
+            // Bind order logic to all trigger buttons
+            const orderButtons = document.querySelectorAll('.w-whatsapp-trigger');
+            orderButtons.forEach(button => {
+                button.addEventListener('click', handleWhatsAppOrder);
+            });
+        });
+    </script>
+</body>
+</html>

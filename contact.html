@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | PRAARYA | Jewellery For Every You</title>
+    <meta name="description" content="Get in touch with Praarya. We are here to help with your orders, styling advice, and any other inquiries.">
+    
+    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Brand Colors */
+            --pr-burgundy: #7A1028;
+            --pr-burgundy-dark: #4A0717;
+            --pr-gold: #C99A3A;
+            --pr-gold-soft: #DDBB6A;
+            --pr-ivory: #FCFAF5;
+            --pr-white: #FFFFFF;
+            --pr-charcoal: #222222;
+            --pr-gray: #777777;
+            --pr-gray-light: #E5E5E5;
+
+            /* Typography */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            
+            /* UI Elements */
+            --border-radius: 2px;
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            
+            /* Layout */
+            --header-height: 80px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--pr-charcoal);
+            background-color: var(--pr-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: var(--font-heading);
+            color: var(--pr-burgundy-dark);
+        }
+
+        p { line-height: 1.7; }
+
+        a {
+            color: var(--pr-burgundy);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        a:hover { color: var(--pr-gold); }
+
+        /* Typography Utilities */
+        .text-burgundy { color: var(--pr-burgundy) !important; }
+        .text-burgundy-dark { color: var(--pr-burgundy-dark) !important; }
+        .text-gold { color: var(--pr-gold) !important; }
+        .text-charcoal { color: var(--pr-charcoal) !important; }
+        .text-ivory { color: var(--pr-ivory) !important; }
+        .text-gray { color: var(--pr-gray) !important; }
+        
+        .bg-burgundy { background-color: var(--pr-burgundy) !important; }
+        .bg-burgundy-dark { background-color: var(--pr-burgundy-dark) !important; }
+        .bg-ivory { background-color: var(--pr-ivory) !important; }
+
+        /* Custom Buttons */
+        .btn-brand-primary, .btn-brand-outline, .btn-brand-outline-light {
+            font-family: var(--font-body);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            padding: 0.8rem 2.5rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition-smooth);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-brand-primary {
+            background-color: var(--pr-burgundy);
+            color: var(--pr-white);
+            border: 1px solid var(--pr-burgundy);
+        }
+
+        .btn-brand-primary:hover {
+            background-color: var(--pr-burgundy-dark);
+            border-color: var(--pr-burgundy-dark);
+            color: var(--pr-white);
+        }
+        
+        .btn-brand-outline {
+            background-color: transparent;
+            color: var(--pr-burgundy);
+            border: 1px solid var(--pr-burgundy);
+        }
+
+        .btn-brand-outline:hover {
+            background-color: var(--pr-burgundy);
+            color: var(--pr-white);
+        }
+
+        .btn-brand-outline-light {
+            background-color: transparent;
+            color: var(--pr-ivory);
+            border: 1px solid var(--pr-ivory);
+        }
+
+        .btn-brand-outline-light:hover {
+            background-color: var(--pr-ivory);
+            color: var(--pr-burgundy-dark);
+        }
+
+        .btn-whatsapp-solid {
+            background-color: #25D366;
+            color: white;
+            border: 1px solid #25D366;
+        }
+        
+        .btn-whatsapp-solid:hover {
+            background-color: #128C7E;
+            border-color: #128C7E;
+            color: white;
+        }
+
+        /* Form Controls */
+        .form-control {
+            border: 1px solid var(--pr-gray-light);
+            border-radius: var(--border-radius);
+            padding: 0.8rem 1.2rem;
+            font-size: 0.95rem;
+            color: var(--pr-charcoal);
+            background-color: var(--pr-ivory);
+            transition: var(--transition-smooth);
+        }
+
+        .form-control:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: var(--pr-burgundy);
+            background-color: var(--pr-white);
+        }
+
+        .form-control::placeholder {
+            color: var(--pr-gray);
+            font-weight: 300;
+        }
+
+        .form-label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--pr-charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Section Spacing */
+        .section-padding { padding: 7rem 0; }
+        @media (max-width: 768px) { .section-padding { padding: 4rem 0; } }
+
+        /* Header / Navbar */
+        .navbar {
+            background-color: var(--pr-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            padding: 0.5rem 0;
+            transition: var(--transition-smooth);
+            height: var(--header-height);
+        }
+        
+        .navbar.scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .navbar-brand-logo {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--pr-burgundy-dark);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        
+        @media (max-width: 991px) {
+            .navbar-brand-logo {
+                font-size: 1.5rem;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--pr-charcoal);
+            font-weight: 500;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 12px;
+            position: relative;
+            padding: 0.5rem 0 !important;
+        }
+
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+            color: var(--pr-burgundy);
+        }
+        
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--pr-burgundy);
+            transition: var(--transition-smooth);
+            transform: translateX(-50%);
+        }
+
+        .navbar-nav .nav-link:hover::after, .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+
+        .header-actions { display: flex; align-items: center; gap: 15px; }
+
+        .header-actions .icon-btn {
+            background: none;
+            border: none;
+            color: var(--pr-charcoal);
+            font-size: 1.1rem;
+            transition: var(--transition-smooth);
+            padding: 0;
+        }
+
+        .header-whatsapp-btn { display: none; }
+        
+        @media (min-width: 992px) {
+            .header-whatsapp-btn {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                background-color: var(--pr-burgundy);
+                color: white;
+                padding: 8px 16px;
+                border-radius: var(--border-radius);
+                font-size: 0.85rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            .header-whatsapp-btn:hover { background-color: var(--pr-burgundy-dark); color: white; }
+        }
+
+        /* Mobile Offcanvas */
+        .offcanvas-start { width: 320px; }
+        .offcanvas-header { padding: 1.5rem; }
+        .offcanvas-title { font-size: 1.5rem; letter-spacing: 2px; }
+        .offcanvas-body .nav-link {
+            padding: 1rem 0;
+            font-size: 1rem;
+            border-bottom: 1px solid var(--pr-gray-light);
+            margin: 0;
+        }
+        .offcanvas-body .nav-link::after { display: none; }
+
+        /* Minimal Hero */
+        .contact-hero {
+            position: relative;
+            background-color: var(--pr-ivory);
+            padding: 8rem 0 5rem;
+            margin-top: var(--header-height);
+            text-align: center;
+        }
+
+        .contact-hero-title {
+            font-size: 3.5rem;
+            color: var(--pr-burgundy-dark);
+            margin-bottom: 1.25rem;
+            line-height: 1.1;
+        }
+
+        .contact-hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--pr-charcoal);
+            font-weight: 300;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .contact-hero { padding: 5rem 1rem 3rem; }
+            .contact-hero-title { font-size: 2.5rem; }
+        }
+
+        /* Contact Cards (Tap-friendly for mobile) */
+        .contact-card {
+            display: flex;
+            align-items: flex-start;
+            padding: 2rem;
+            background-color: var(--pr-white);
+            border: 1px solid var(--pr-gray-light);
+            border-radius: var(--border-radius);
+            transition: var(--transition-smooth);
+            text-decoration: none;
+            color: var(--pr-charcoal);
+            height: 100%;
+        }
+        
+        .contact-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border-color: var(--pr-gold-soft);
+            transform: translateY(-3px);
+            color: var(--pr-charcoal);
+        }
+
+        .contact-card.primary-card {
+            background-color: var(--pr-ivory);
+            border-color: transparent;
+        }
+
+        .contact-card.primary-card:hover {
+            border-color: var(--pr-burgundy);
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: var(--pr-ivory);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--pr-burgundy);
+            flex-shrink: 0;
+            margin-right: 1.25rem;
+        }
+        
+        .primary-card .contact-icon {
+            background-color: var(--pr-white);
+            color: #25D366; /* WhatsApp specific accent */
+        }
+
+        .contact-card-content h3 {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-card-content p {
+            font-size: 0.95rem;
+            color: var(--pr-gray);
+            margin-bottom: 0;
+            font-weight: 300;
+        }
+
+        /* Success Message Container */
+        .form-success-state {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            padding: 2rem;
+            text-align: center;
+            border-radius: var(--border-radius);
+            display: none;
+        }
+
+        .form-success-state i {
+            font-size: 3rem;
+            color: #22c55e;
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ CTA Banner */
+        .faq-banner {
+            background-color: var(--pr-charcoal);
+            color: var(--pr-white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--pr-charcoal);
+            color: var(--pr-gray-light);
+            padding: 5rem 0 2rem 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            color: var(--pr-ivory);
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .footer-logo:hover { color: var(--pr-gold); }
+
+        .footer-heading {
+            color: var(--pr-ivory);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .footer-links { list-style: none; padding: 0; margin: 0; }
+        .footer-links li { margin-bottom: 0.8rem; }
+        .footer-links a {
+            color: var(--pr-gray);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+        .footer-links a:hover { color: var(--pr-ivory); }
+
+        .social-icons { display: flex; gap: 15px; margin-top: 1.5rem; }
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.05);
+            color: var(--pr-ivory);
+            transition: var(--transition-smooth);
+            font-size: 1.1rem;
+        }
+        .social-icons a:hover {
+            background-color: var(--pr-burgundy);
+            color: var(--pr-white);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 4rem;
+            padding-top: 2rem;
+            font-size: 0.85rem;
+            color: #555;
+        }
+        .footer-bottom a { color: #555; text-decoration: none; }
+        .footer-bottom a:hover { color: var(--pr-ivory); }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler border-0 px-0 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <i class="fa-solid fa-bars fs-3 text-charcoal"></i>
+            </button>
+
+            <!-- Brand Logo -->
+            <a class="navbar-brand navbar-brand-logo mx-auto mx-lg-0" href="index.html">
+                PRAARYA
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="collections.html">Collections</a></li>
+                    <li class="nav-item"><a class="nav-link" href="story.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="why.html">Why Praarya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="care.html">Jewellery Care</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <button class="icon-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <a href="https://wa.me/919866783703" class="header-whatsapp-btn" target="_blank">
+                    <i class="fa-brands fa-whatsapp fs-5"></i>
+                    <span>Order Now</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title font-heading text-burgundy-dark" id="offcanvasNavbarLabel">PRAARYA</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body px-0 py-2">
+            <ul class="navbar-nav w-100 px-4">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="collections.html">Collections</a></li>
+                <li class="nav-item"><a class="nav-link" href="story.html">Our Story</a></li>
+                <li class="nav-item"><a class="nav-link" href="why.html">Why Praarya</a></li>
+                <li class="nav-item"><a class="nav-link" href="care.html">Jewellery Care</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="px-4 mt-4">
+                <a href="https://wa.me/919866783703" class="btn btn-brand-primary w-100 py-3" target="_blank">
+                    <i class="fa-brands fa-whatsapp fs-5 me-2"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Minimal Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 class="contact-hero-title">We'd Love to Hear From You</h1>
+            <p class="contact-hero-subtitle">Have a question about a product, order or collection? Reach out to us.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                
+                <!-- Contact Form (Left) -->
+                <div class="col-lg-7 pe-lg-5">
+                    <h2 class="font-heading text-burgundy-dark mb-4" style="font-size: 2rem;">Send a Message</h2>
+                    <p class="text-gray mb-5" style="font-weight: 300;">Fill out the form below and our customer care team will get back to you within 24 hours.</p>
+                    
+                    <!-- 
+                      NOTE: For the static version, this form relies on frontend 
+                      JavaScript validation. It is structured cleanly with semantic 
+                      HTML to be easily connected to a real backend API later.
+                    -->
+                    <form id="praaryaContactForm" class="needs-validation" novalidate>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label for="inputName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Your name" required>
+                                <div class="invalid-feedback">Please provide your name.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="your.email@example.com" required>
+                                <div class="invalid-feedback">Please provide a valid email.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputPhone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="inputPhone" placeholder="+91 00000 00000">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputSubject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="inputSubject" placeholder="How can we help?" required>
+                                <div class="invalid-feedback">Please provide a subject.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="inputMessage" class="form-label">Message</label>
+                                <textarea class="form-control" id="inputMessage" rows="5" placeholder="Write your message here..." required></textarea>
+                                <div class="invalid-feedback">Please write a message.</div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-brand-primary w-100 py-3">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Success State (Hidden by default) -->
+                    <div id="formSuccessState" class="form-success-state mt-4">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <h3 class="font-heading text-charcoal mb-2">Message Sent Successfully!</h3>
+                        <p class="text-gray mb-0">Thank you for reaching out. A member of our team will be in contact shortly.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Methods (Right) -->
+                <div class="col-lg-5">
+                    <div class="d-flex flex-column gap-4">
+                        
+                        <!-- WhatsApp - Primary Contact -->
+                        <a href="https://wa.me/919866783703" target="_blank" class="contact-card primary-card">
+                            <div class="contact-icon">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-card-content w-100">
+                                <h3>WhatsApp</h3>
+                                <p class="mb-3">Fastest way to reach us for orders and styling advice.</p>
+                                <span class="btn btn-brand-primary btn-whatsapp-solid btn-sm d-inline-flex px-3 py-2">
+                                    Chat on WhatsApp
+                                </span>
+                            </div>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:praaryacollections@gmail.com" class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h3>Email</h3>
+                                <p>praaryacollections@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/praarya_collections/" class="contact-card" target="_blank">
+                            <div class="contact-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h3>Instagram</h3>
+                                <p>Connect with Praarya and tag us.</p>
+                            </div>
+                        </a>
+
+                        <!-- Facebook -->
+                        <a href="#" class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h3>Facebook</h3>
+                                <p>Join our community.</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ CTA -->
+    <section class="faq-banner">
+        <div class="container text-center">
+            <h2 class="font-heading mb-4 text-ivory display-6">Looking for quick answers?</h2>
+            <p class="text-gray-light mb-4 pb-2" style="font-weight: 300;">Find details on jewellery care, shipping, and returns in our FAQ section.</p>
+            <a href="care.html#careFaqAccordion" class="btn btn-brand-outline-light">View FAQs</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-4 col-md-12 pe-lg-5">
+                    <a href="index.html" class="footer-logo">PRAARYA</a>
+                    <p class="mb-4 text-gray" style="font-size: 0.95rem; font-weight: 300;">Jewellery For Every You. Premium, elegant, and affordable imitation jewellery designed to celebrate your unique style.</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/praarya_collections/" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://wa.me/919866783703" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Praarya</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="story.html">Our Story</a></li>
+                        <li><a href="why.html">Why Praarya</a></li>
+                        <li><a href="care.html">Jewellery Care</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <h4 class="footer-heading">Collections</h4>
+                    <ul class="footer-links">
+                        <li><a href="collections.html">New Arrivals</a></li>
+                        <li><a href="collections.html">Earrings</a></li>
+                        <li><a href="collections.html">Necklaces & Sets</a></li>
+                        <li><a href="collections.html">Rings & Bracelets</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-12">
+                    <h4 class="footer-heading">Customer Care</h4>
+                    <ul class="footer-links mb-4">
+                        <li><a href="terms.html#section-8">Shipping & Returns</a></li>
+                        <li><a href="care.html#careFaqAccordion">FAQ</a></li>
+                    </ul>
+                    <h4 class="footer-heading mb-3">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li class="d-flex align-items-start text-gray mb-2">
+                            <i class="fa-regular fa-envelope mt-1 me-2 text-ivory"></i>
+                            <a href="mailto:praaryacollections@gmail.com" style="color: inherit;">praaryacollections@gmail.com</a>
+                        </li>
+                        <li class="d-flex align-items-start text-gray">
+                            <i class="fa-brands fa-whatsapp mt-1 me-2 text-ivory"></i>
+                            <a href="https://wa.me/919866783703" target="_blank" style="color: inherit;">+91 98667 83703</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="mb-3 mb-md-0">&copy; 2026 PRAARYA. All rights reserved.</p>
+                <div class="d-flex gap-4">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Sticky Navbar Shadow on Scroll
+            const navbar = document.getElementById('mainNav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Prevent default for empty placeholder links
+            const emptyLinks = document.querySelectorAll('a[href="#"]');
+            emptyLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    if(link.getAttribute('href') === '#') {
+                        e.preventDefault();
+                    }
+                });
+            });
+
+            // Frontend Form Validation & Mock Submit Logic
+            const contactForm = document.getElementById('praaryaContactForm');
+            const successState = document.getElementById('formSuccessState');
+
+            if(contactForm) {
+                contactForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    
+                    if (!contactForm.checkValidity()) {
+                        // Form is invalid, show validation styling
+                        contactForm.classList.add('was-validated');
+                    } else {
+                        // Form is valid
+                        // Hide form and show success message
+                        contactForm.style.display = 'none';
+                        successState.style.display = 'block';
+                        
+                        // NOTE: In a real implementation, you would trigger an API call here.
+                        // Example:
+                        // const formData = new FormData(contactForm);
+                        // fetch('/api/contact', { method: 'POST', body: formData })
+                        //   .then(...)
+                    }
+                }, false);
+            }
+        });
+    </script>
+</body>
+</html>
